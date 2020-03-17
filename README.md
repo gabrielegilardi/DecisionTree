@@ -1,9 +1,9 @@
 ## Decision Tree, Random Tree, Bootstrap Aggregating (Bagging), Boosting (AdaBoost)
 
-#### Reference
+### Reference
 Based on [project 3](http://quantsoftware.gatech.edu/CS7646_Spring_2020) in the Georgia Tech Spring 2020 course [Machine Learning for Trading](http://quantsoftware.gatech.edu/CS7646_Spring_2020) by Prof. Tucker Balch.
 
-#### Characteristics
+### Characteristics
 - The code has been written and tested in Python 3.6.10. 
 - Decision and random tree implementation for regression problems.
 - Decision tree: cross-correlation and median used to determine the best feature to split and the split value.
@@ -12,12 +12,12 @@ Based on [project 3](http://quantsoftware.gatech.edu/CS7646_Spring_2020) in the 
 - The corner case where after a split all data end up in one branch is also implemented.
 - Bootstrap aggregating can be applied to both decision tree and random tree.
 - AdaBoosting is implemented as boosting algorithm.
-- Usage: python test.py `csv-filename`.
+- Usage: *python test.py <csv-filename>*.
 
-#### Parameters
+### Parameters
 `sys.argv[1]` File name with the dataset passed as argument. Data must be in a csv file, with each column a feature and the label in the last column.
 
-`0 < split_factor < 1` Define the split between training and test data.
+`split_factor` Define the split between training and test data.
 
 `learner_type` Define the type of learner (decision tree or random tree).
 
@@ -31,7 +31,7 @@ Based on [project 3](http://quantsoftware.gatech.edu/CS7646_Spring_2020) in the 
 
 `boost` Specify if boosting should be used or not.
 
-#### Examples
+### Examples
 
 All examples are for the file `istanbul.csv`. Correlation results are obtained averaging 20 runs. 
 

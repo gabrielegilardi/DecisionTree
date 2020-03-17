@@ -4,37 +4,44 @@
 Decision Tree, Random Tree, Bootstrap Aggregating (Bagging), Boosting (AdaBoost)
 ================================================================================
 
+References
+==========
+- Based on project 3 in the Georgia Tech Spring 2020 course "Machine Learning for Trading"
+  by Prof. Tucker Balch.
+- Course: http://quantsoftware.gatech.edu/CS7646_Spring_2020
+- Project: http://quantsoftware.gatech.edu/Spring_2020_Project_3:_Assess_Learners
+
 Characteristics
 ===============
+- The code has been written and tested in Python 3.6.10. 
 - Decision and random tree implementation for regression problems.
-- Decision tree: cross-correlation and median used to determine the best feature to split
-  and the split value.
+- Decision tree: cross-correlation and median used to determine the best feature to split and the split value.
 - Random tree: best feature and split value determined randomly
-- Tree-size reduction can be done by by leaf (defining the lowest number of leaves to keep
-  on a branch) and by value (defining the tolerance to group leaves with close values).
+- Tree-size reduction can be done by by leaf (defining the lowest number of leaves to keep on a branch) and by value (defining the tolerance to group close-values leaves).
 - The corner case where after a split all data end up in one branch is also implemented.
-- Bootstrap aggregating can be applied to either decision tree or random tree.
-- Boosting using AdaBoosting can be applied to either decision tree or random tree.
+- Bootstrap aggregating can be applied to both decision tree and random tree.
+- AdaBoosting is implemented as boosting algorithm.
+- Usage: python test.py csv-filename.
 
 Main parameters
 ===============
 sys.argv[1]
-    File name with the dataset passed as argument when calling this function. Data must
-    be in a csv file, with each column a feature and the label in the last column.
+    File name with the dataset passed as argument. Data must be in a csv file, with each
+    column a feature and the label in the last column.
 0 < split_factor < 1
     Define the split between training and test data.
 learner_type = dt, rt
-    Define the type of learner (dt = Decision Tree, rt = Random Tree).
+    Define the type of learner (decision tree or random tree).
 leaf >= 1
     Define the lowest number of leaves to keep; any branch with equal or less leaves is
     substituted by a single leaf with a value equal to the average of the removed leaves.
 tol >= 0.0
     Define the tolerance to group leaves based on their labels; any branch where the leaves
-    have a value that differ from their average less than tol is substituted by a single
-    leaf with a value equal to the average.
+    have a value that differ from their average less or equal to this tolerance is substituted
+    by a single leaf with a value equal to the average.
 bags >= 0
     Define the number of bags to be used for bootstrap aggregating; no bagging is enforced
-    setting bags = 0.
+    setting this value to zero.
 0 < bag_factor <=1
     Define the number of data in each bag as a fraction of the number of training data.
 boost = True, False
@@ -42,10 +49,10 @@ boost = True, False
 
 Examples
 ========
+All examples are for the file `istanbul.csv`. Correlation results are obtained averaging
+20 runs. 
 
-Correlation results are obtained averaging 20 runs for each example. 
-
-- Basic case: decision tree, no tree reduction, no bagging, no boosting.
+- Basic case: decision tree learner, no tree reduction, no bagging, no boosting.
 - Correlation predicted/actual values: 0.9992 (training), 0.7109 (test).
 split_factor = 0.7     
 learner_type = 'dt'
@@ -55,9 +62,9 @@ bags = 0
 bag_factor = 1.0
 boost = False
 
-- As basic case but using random tree.
+- As basic case but using a random tree learner.
 - Correlation predicted/actual values: 0.9708 (training), 0.6349 (test). 
-- Comment: worst results but faster computationally.
+- Comment: worst results but faster computation.
 split_factor = 0.7     
 learner_type = 'rt'
 leaf = 1
@@ -98,14 +105,6 @@ tol = 1.0e-6
 bags = 10
 bag_factor = 1.0
 boost = False
-
-
-References
-==========
-- Based on project 3 in the Georgia Tech course "Machine Learning for Trading" by Prof. 
-  Tucker Balch, Spring 2020.
-- Course: http://quantsoftware.gatech.edu/CS7646_Spring_2020
-- Project: http://quantsoftware.gatech.edu/Spring_2020_Project_3:_Assess_Learners
 """
 
 import sys  	
