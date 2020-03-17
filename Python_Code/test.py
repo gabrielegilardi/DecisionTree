@@ -21,7 +21,7 @@ Characteristics
 - The corner case where after a split all data end up in one branch is also implemented.
 - Bootstrap aggregating can be applied to both decision tree and random tree.
 - AdaBoosting is implemented as boosting algorithm.
-- Usage: python test.py csv-filename.
+- Usage: python test.py <csv-filename>.
 
 Main parameters
 ===============
