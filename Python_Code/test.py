@@ -133,7 +133,7 @@ np.seterr(all='ignore')
 
 # Read data from a csv file
 if len(sys.argv) != 2:
-    print("Usage: python test.py <filename>")  		  	   		     			  		 			     			  	  		 	  	 		 			  		  			
+    print("Usage: python test.py <csv-filename>")  		  	   		     			  		 			     			  	  		 	  	 		 			  		  			
     sys.exit(1)  		  	   		     			  		 			     			  	  		 	  	 		 			  		  			
 data = np.loadtxt(sys.argv[1], delimiter=',')
 
