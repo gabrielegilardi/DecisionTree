@@ -35,7 +35,7 @@ Based on [project 3](http://quantsoftware.gatech.edu/CS7646_Spring_2020) in the 
 
 All examples are for the file `istanbul.csv`. Correlation results are obtained averaging 20 runs. 
 
-- Basic case: decision tree learner, no tree reduction, no bagging, no boosting. Correlation predicted/actual values: 0.9992 (training), 0.7109 (test).
+- Reference case: decision tree learner, no tree reduction, no bagging, no boosting. Correlation predicted/actual values: 0.9992 (training), 0.7109 (test).
 ```
 split_factor = 0.7     
 learner_type = 'dt'
@@ -46,7 +46,7 @@ bag_factor = 1.0
 boost = False
 ```
 
-- As basic case but using a random tree learner. Correlation predicted/actual values: 0.9708 (training), 0.6349 (test). Comment: worst results but faster computation.
+- As reference case but using a random tree learner. Correlation predicted/actual values: 0.9708 (training), 0.6349 (test). Comment: worst results but faster computation.
 ```
 split_factor = 0.7     
 learner_type = 'rt'
@@ -57,7 +57,7 @@ bag_factor = 1.0
 boost = False
 ```
 
-- As basic case but changing the number of leaves. Correlation predicted/actual values: 0.8917 (training), 0.7843 (test). Comment: reduce overfitting and generalize better.
+- As reference case but changing the number of leaves. Correlation predicted/actual values: 0.8917 (training), 0.7843 (test). Comment: reduce overfitting and generalize better.
 ```
 split_factor = 0.7     
 learner_type = 'dt'
@@ -68,7 +68,7 @@ bag_factor = 1.0
 boost = False
 ```
 
-- As basic case but changing the tolerance. Correlation predicted/actual values: 0.9087 (training), 0.7642 (test). Comment: reduce overfitting and generalize better.
+- As reference case but changing the tolerance. Correlation predicted/actual values: 0.9087 (training), 0.7642 (test). Comment: reduce overfitting and generalize better.
 ```
 split_factor = 0.7     
 learner_type = 'dt'
@@ -79,7 +79,7 @@ bag_factor = 1.0
 boost = False
 ```
 
-- As basic case but using bagging. Correlation predicted/actual values: 0.9748 (training), 0.8333 (test). Comment: generalize better, using boosting will slightly improve results.
+- As reference case but using bagging. Correlation predicted/actual values: 0.9748 (training), 0.8333 (test). Comment: generalize better, using boosting will slightly improve results.
 ```
 split_factor = 0.7     
 learner_type = 'dt'
