@@ -3,7 +3,7 @@
 
 ## Reference
 
-Based on [project 3](http://quantsoftware.gatech.edu/CS7646_Spring_2020) in the Georgia Tech Spring 2020 course [Machine Learning for Trading](http://quantsoftware.gatech.edu/CS7646_Spring_2020) by Prof. Tucker Balch.
+Based on [project 3](http://quantsoftware.gatech.edu/Spring_2020_Project_3:_Assess_Learners) in the Georgia Tech Spring 2020 course [Machine Learning for Trading](http://quantsoftware.gatech.edu/CS7646_Spring_2020) by Prof. Tucker Balch.
 
 ## Characteristics
 
