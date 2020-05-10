@@ -1,7 +1,7 @@
 """
 Decision Tree, Random Tree, Bootstrap Aggregating (Bagging), Boosting (AdaBoost)
 
-(c) 2020 Gabriele Gilardi
+Copyright (c) 2020 Gabriele Gilardi
 
 References
 ----------
