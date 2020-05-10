@@ -1,10 +1,10 @@
-
 """
 Bootstrap aggregating (bagging) and boosting (AdaBoost) class
+
+(c) 2020 Gabriele Gilardi
 """
 
 import numpy as np
-
 
 class BagLearner():
 

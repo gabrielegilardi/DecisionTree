@@ -1,6 +1,7 @@
-
 """
 Decision Tree class
+
+(c) 2020 Gabriele Gilardi
 """
 
 import numpy as np
