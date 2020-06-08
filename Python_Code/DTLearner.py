@@ -19,7 +19,7 @@ class DTLearner:
 
     def buildTree(self, X, Y):
         """
-        Build the decision-tree table:
+        Builds the decision-tree table:
         column 0 = feature used for the split (-1 indicates a leaf)
         column 1 = split value
         column 2 = relative position left branch (0 indicates no left branch)
@@ -83,7 +83,7 @@ class DTLearner:
 
     def evalData(self, X):
         """
-        Evaluate a dataset of features with the created decision-tree table
+        Evaluates a dataset of features with the created decision-tree table
         column 0 = feature used for the split (-1 indicates a leaf)
         column 1 = split value
         column 2 = relative position left branch (0 indicates no left branch)
