@@ -1,5 +1,5 @@
 """
-Decision Tree class
+Decision Tree class.
 
 Copyright (c) 2020 Gabriele Gilardi
 """
@@ -19,7 +19,8 @@ class DTLearner:
 
     def buildTree(self, X, Y):
         """
-        Builds the decision-tree table:
+        Builds the decision-tree table.
+
         column 0 = feature used for the split (-1 indicates a leaf)
         column 1 = split value
         column 2 = relative position left branch (0 indicates no left branch)
@@ -72,7 +73,7 @@ class DTLearner:
 
     def createModel(self, X, Y):
         """
-        Wrapper for building the decision-tree table
+        Wrapper for building the decision-tree table.
         """
         # Build the tree-table as 1-dim array
         a = self.buildTree(X, Y)
@@ -83,7 +84,8 @@ class DTLearner:
 
     def evalData(self, X):
         """
-        Evaluates a dataset of features with the created decision-tree table
+        Evaluates a dataset of features with the created decision-tree table.
+        
         column 0 = feature used for the split (-1 indicates a leaf)
         column 1 = split value
         column 2 = relative position left branch (0 indicates no left branch)

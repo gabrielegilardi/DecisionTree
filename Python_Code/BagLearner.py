@@ -1,5 +1,5 @@
 """
-Bootstrap aggregating (bagging) and boosting (AdaBoost) class
+Bootstrap aggregating (bagging) and boosting (AdaBoost) class.
 
 Copyright (c) 2020 Gabriele Gilardi
 """
@@ -29,7 +29,7 @@ class BagLearner():
 
     def createModel(self, X, Y):
         """
-        Builds the ensemble of learners
+        Builds the ensemble of learners.
         """
         n = X.shape[0]                  # Number of training data
         m = int(self.bag_factor*n)      # Number of data in each bag
@@ -65,7 +65,7 @@ class BagLearner():
 
     def evalData(self, X):
         """
-        Evaluates a dataset of features for the ensemble of learners
+        Evaluates a dataset of features for the ensemble of learners.
         """
         pred_Y = np.zeros(X.shape[0])    # Initialize prediction array
 

@@ -1,5 +1,5 @@
 """
-Decision Tree, Random Tree, Bootstrap Aggregating (Bagging), Boosting (AdaBoost)
+Decision Tree, Random Tree, Bootstrap Aggregating (Bagging), Boosting (AdaBoost).
 
 Copyright (c) 2020 Gabriele Gilardi
 
