@@ -1,6 +1,6 @@
 """
-Regression and Classification Using Decision Tree, Random Tree, Bootstrap Aggregating
-and Boosting.
+Regression and Classification Using Decision Tree, Random Tree, Bootstrap
+Aggregating, and Boosting.
 
 Copyright (c) 2020 Gabriele Gilardi
 
