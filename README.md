@@ -1,5 +1,5 @@
 
-# Decision Tree, Random Tree, Bootstrap Aggregating (Bagging), Boosting (AdaBoost)
+# Regression and Classification Using Decision Tree, Random Tree, Bootstrap Aggregating and Boosting
 
 ## Reference
 
@@ -8,12 +8,12 @@ Based on [project 3](http://quantsoftware.gatech.edu/Spring_2020_Project_3:_Asse
 ## Characteristics
 
 - The code has been written and tested in Python 3.6.10.
-- Decision and random tree implementation for regression problems.
+- Decision and random tree implementation for regression and classification.
 - Decision tree: cross-correlation and median used to determine the best feature to split and the split value.
 - Random tree: best feature and split value determined randomly
 - Tree-size reduction can be done by by leaf (defining the lowest number of leaves to keep on a branch) and by value (defining the tolerance to group close-values leaves).
 - The corner case where after a split all data end up in one branch is also implemented.
-- Bootstrap aggregating can be applied to both decision tree and random tree.
+- Bootstrap aggregating (bagging) can be applied to both decision tree and random tree.
 - AdaBoosting is implemented as boosting algorithm.
 - Usage: *python test.py csv-filename*.
 

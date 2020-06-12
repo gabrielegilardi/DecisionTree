@@ -1,12 +1,14 @@
 """
-Random Tree class.
+Regression and Classification Using Decision Tree, Random Tree, Bootstrap Aggregating
+and Boosting.
 
 Copyright (c) 2020 Gabriele Gilardi
 """
 
 import numpy as np
 
-class RTLearner:
+
+class DTLearner:
 
     def __init__(self, leaf=1, tol=1.0e-6):
         """
@@ -37,17 +39,21 @@ class RTLearner:
 
         # Keep splitting
         else:
-            # Randomly pick a feature and split
-            idx = np.random.randint(0, X.shape[1])
-            i = np.random.randint(0, X.shape[0], size=2)
-            split_value = (X[i[0], idx] + X[i[1], idx]) / 2.0
+            # Determine the best feature
+            c = np.empty(X.shape[1])
+            for i in range(X.shape[1]):
+                c[i] = np.corrcoef(X[:, i], Y)[0, 1]
+            idx = np.argmax(np.absolute(c))
+
+            # Split on the median
+            split_value = np.median(X[:, idx])
 
             # Build the left branch dataset
             X_left = X[X[:, idx] <= split_value]
             Y_left = Y[X[:, idx] <= split_value]
 
             # Return the mean if there is no split (because all data end up in
-            # the left branch).
+            # the left branch)
             if (X_left.shape[0] == X.shape[0]):
                 return np.array([-1, Y_left.mean(), 0, 0])
 
