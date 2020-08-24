@@ -1,6 +1,6 @@
 """
-Regression and Classification Using Decision Tree, Random Tree, Bootstrap
-Aggregating, and Boosting.
+Regression Using Decision Tree, Random Tree, Bootstrap Aggregating,
+and Boosting.
 
 Copyright (c) 2020 Gabriele Gilardi
 
@@ -14,7 +14,7 @@ References
 Characteristics
 ---------------
 - The code has been written and tested in Python 3.6.10.
-- Decision and random tree implementation for regression and classification.
+- Decision and random tree implementation for regression.
 - Decision tree: cross-correlation and median used to determine the best
   feature to split and the split value.
 - Random tree: best feature and split value determined randomly
